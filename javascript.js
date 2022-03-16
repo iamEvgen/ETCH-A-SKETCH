@@ -65,14 +65,14 @@ function colorizeCell(cell, event) {
 
 function clearCells() {
     cells.forEach(function(cell) {
-        cell.removeEventListener('mouseover', colorizeCell);
+        cell.removeEventListener('mousemove', colorizeCell);
     })
     cells = [];
 }
 
 function addEventListener() {
     cells.forEach(function(cell) {
-        cell.addEventListener('mouseover', colorizeCell.bind(null, cell))
+        cell.addEventListener('mousemove', colorizeCell.bind(null, cell))
     })
 }
 
