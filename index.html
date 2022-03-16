@@ -5,8 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etch-a-sketch</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <h1>Etch a sketch</h1>
+    <div id="field"></div>
+    <div id="params">
+        <div id="colorSelect">
+            <h3>Color select</h3>
+            <button id="colorBlack">Black</button>
+            <button id="colorRGB">RGB select</button>
+            <button id="colorRainbow">Rainbow</button>
+        </div>
+        <div id="sizeSelect">
+            <h3>Field size</h3>
+            <button id="size16">16 x 16</button>
+            <button id="size32">32 x 32</button>
+            <button id="size64">64 x 64</button>
+        </div>
+        <div id="commands">
+            <h3>Commands</h3>
+            <button id="cmdErase">Erase</button>
+            <button id="cmdSave">Save</button> 
+        </div>
+    </div>
+    <script src="javascript.js"></script>
 </body>
 </html>

@@ -1,0 +1,57 @@
+html {
+    background: rgb(212,30,244);
+    background: linear-gradient(135deg, rgba(212,30,244,1) 0%, rgba(3,13,49,1) 50%, rgba(0,212,255,1) 
+    100%);
+}
+
+html, body {
+    height: 100%;
+  }
+
+body {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    font-family: fantasy;
+    margin: 0px;
+}
+
+#params {
+    display: flex;
+    gap: 20px;
+}
+
+#colorSelect {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#sizeSelect {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#commands {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+button {
+    font-family: fantasy;
+    background: white;
+    border: 0;
+    padding: 5px;
+}
+
+button:hover {
+    background: rgb(235, 235, 235);
+}
+
+h3 {
+    margin-bottom: -10px;
+}
