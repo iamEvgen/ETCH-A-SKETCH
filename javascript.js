@@ -5,33 +5,39 @@ field.style.flexDirection = 'column';
 field.style.gap = '1px';
 field.style.background = 'black';
 
+const colorBlack = document.getElementById('colorBlack');
+
 const size16 = document.getElementById('size16');
 const size32 = document.getElementById('size32');
 const size64 = document.getElementById('size64');
 
+const erase = document.getElementById('cmdErase');
+
 let cells = [];
 let color = 'black';
+let rainbowMode = false;
 
 function setFieldSize(size) {
     fieldSize = size;
     drawField();
 }
 
-function colorizeCell(cell) {
-    console.log(cell);
-    cell.style.background = 'black';
+function colorizeCell(cell, event) {
+    if (event.buttons) {
+        cell.style.background = color;
+    }
 }
 
 function clearCells() {
     cells.forEach(function(cell) {
-        cell.removeEventListener('mousedown', colorizeCell);
+        cell.removeEventListener('mouseover', colorizeCell);
     })
     cells = [];
 }
 
 function addEventListener() {
     cells.forEach(function(cell) {
-        cell.addEventListener('mousedown', colorizeCell.bind(null, cell))
+        cell.addEventListener('mouseover', colorizeCell.bind(null, cell))
     })
 }
 
@@ -63,8 +69,11 @@ function drawField() {
     addEventListener();
 }
 
+drawField();
+
 size16.addEventListener('click', setFieldSize.bind(null, 16));
 size32.addEventListener('click', setFieldSize.bind(null, 32));
 size64.addEventListener('click', setFieldSize.bind(null, 64));
 
-drawField();
+erase.addEventListener('click', drawField);
+colorBlack.addEventListener('click', () => {color = 'black'; rainbowMode = false;})

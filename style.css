@@ -52,6 +52,10 @@ button:hover {
     background: rgb(235, 235, 235);
 }
 
+h1 {
+    margin-bottom: 10px;
+}
+
 h3 {
     margin-bottom: -10px;
 }
